@@ -1,0 +1,6 @@
+@import url('base.css');
+@import '~antd/dist/antd.css';
+/* change the antd global.css if needed, rerun watch after change */
+
+@import '/node_modules/react-grid-layout/css/styles.css';
+@import '/node_modules/react-resizable/css/styles.css';

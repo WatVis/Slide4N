@@ -1,0 +1,423 @@
+/*
+    See the JupyterLab Developer Guide for useful CSS Patterns:
+
+    https://jupyterlab.readthedocs.io/en/stable/developer/css.html
+*/
+/* define css variables */
+:root {
+  --gap-small: 10px;
+  --padding-small: 5px;
+}
+
+/* util css */
+.active {
+  border-color: #40a9ff;
+  box-shadow: 0 0 0 2px rgb(24 144 255 / 20%);
+  border-right-width: 1px;
+  outline: 0;
+}
+
+.flex-center {
+  width: 100%;
+  height: 90%;
+  padding: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mask-effect {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: gainsboro;
+  opacity: 0.6;
+}
+
+/* main UI */
+.nbstory-widget {
+  display: flex;
+  /* justify-content: center; */
+}
+
+.main-layout {
+  width: 100%;
+  height: 100%;
+  max-width: 1350px;
+
+  display: flex;
+  justify-content: flex-start;
+  /* text-align: center; */
+}
+
+.code-overview {
+  width: 8%;
+  min-width: 100px;
+  max-height: 100%;
+  padding-top: 2px;
+
+  /* font-size: 15px; */
+  overflow-y: auto;
+
+  border-right: 1px dashed darkgray;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.control-panel {
+  width: 22%;
+  min-width: 260px;
+  max-height: 100%;
+  padding: 5px;
+
+  overflow-y: auto;
+
+  border-right: 1px dashed darkgray;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  position: relative;
+}
+
+.slide-panel {
+  width: 70%;
+  height: 100%;
+  padding: 5px;
+
+  overflow-y: auto;
+
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+
+  /* border: 2px dashed darkgray; */
+}
+
+/* code-overview */
+.code-overview-tooltip {
+  /* 模仿ant d的样式 */
+  width: 400px;
+  max-width: 100%;
+  padding: 5px;
+
+  color: grey;
+  text-align: left;
+  text-decoration: none;
+
+  border: 2px solid #cccccc;
+  border-radius: 2px;
+  background-color: #f2f2f2;
+
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  align-items: center;
+}
+
+.code-overview-tooltip-codes {
+  width: 400px;
+  max-width: 100%;
+  padding: 5px;
+
+  /* 控制显示的内容 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.code-overview-tooltip b {
+  width: 150px;
+  border-bottom: 2px dashed white;
+}
+
+.code-overview-tooltip-v1 {
+  /* 模仿ant d的样式 */
+  max-width: 100px;
+  padding: 5px;
+
+  color: #fff;
+  text-align: left;
+  text-decoration: none;
+
+  border: 2px solid gray;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.75);
+  box-shadow: 0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px 0 rgb(0 0 0 / 8%),
+    0 9px 28px 8px rgb(0 0 0 / 5%);
+
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  align-items: center;
+}
+
+.code-overview-tooltip-v1-codes {
+  max-width: 100px;
+  padding: 5px;
+
+  /* 控制显示的内容 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.code-overview-tooltip-v1 b {
+  max-width: 100px;
+  border-bottom: 2px dashed white;
+}
+
+/* control panel */
+.add-slide {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.collapse-panel {
+  padding: 8px 10px;
+}
+
+/* MetaView */
+.metaview {
+  width: 100%;
+
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  gap: 10px; */
+}
+
+.flex-h-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* SlideControl */
+.points-view {
+  height: 150px;
+
+  overflow-y: auto;
+}
+
+.single-point {
+  /* make sure too many words will be wraped multiple lines */
+  max-width: 100%;
+  overflow-wrap: anywhere;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  padding-bottom: 4px;
+  border-bottom: 1px dashed gray;
+}
+
+.text-border-single-point {
+  padding: 1px 11px;
+  border: 1px solid #91d5ff;
+  border-radius: 2px;
+}
+
+/* SlidePanel */
+.slide-deck {
+  width: 100%;
+  min-width: 750px;
+  max-width: 800px;
+  height: 480px;
+  margin-top: 3px;
+  margin-bottom: 10px;
+  padding: 5px;
+
+  position: relative;
+
+  border: 2px solid gray;
+}
+
+.slide-title {
+  height: 10%;
+  width: 90%;
+  padding: 5px;
+
+  /* border: 1px dashed gray; */
+
+  /* position: relative; */
+  display: inline-flex;
+}
+
+.slide-deck-medium {
+  height: 82%;
+  width: 100%;
+  padding: 5px;
+
+  /* forbid drag contents out */
+  overflow: hidden;
+
+  /* border: 1px dashed gray; */
+
+  position: relative;
+}
+
+.slide-deck-medium-box {
+  position: absolute;
+  width: 100%;
+}
+
+.drag-handler {
+  background-color: gainsboro;
+  cursor: move;
+}
+
+.slide-template-edit {
+  width: 100%;
+  /* height: 100%; */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slide-template-media {
+  width: 100%;
+  /* height: 100%; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px dashed; */
+
+  position: absolute;
+  bottom: 120px;
+}
+
+.template-container {
+  width: 100px;
+  height: 56px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid;
+  cursor: pointer;
+}
+
+/* navi bar */
+.slide-footer {
+  height: 8%;
+  width: 100%;
+  padding: 5px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slide-footer-navi {
+  width: 95%;
+
+  display: flex;
+  align-items: center;
+}
+
+.slide-footer-num {
+  width: 4%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.slide-button {
+  padding: 8px 5px;
+
+  border: 1px solid gray;
+  border-radius: 5px;
+
+  /* position: absolute; */
+  /* bottom: 15px; */
+  /* right: 15px; */
+
+  z-index: 5;
+}
+
+.slide-add-bullet {
+  padding: 8px 5px;
+
+  border: 1px solid gray;
+  border-radius: 5px;
+
+  z-index: 5;
+}
+
+/* support display table on slide */
+.dataframe {
+  text-align: right;
+  border: none;
+  width: -webkit-fill-available;
+}
+
+.dataframe tbody tr th:only-of-type {
+  vertical-align: middle;
+}
+
+.dataframe tbody tr th {
+  vertical-align: top;
+}
+
+.dataframe thead th {
+  text-align: right;
+}
+
+.dataframe th {
+  font-weight: bold;
+}
+
+.dataframe tbody tr:nth-child(odd) {
+  background: var(--jp-layout-color0);
+}
+
+.dataframe tbody tr:nth-child(even) {
+  background: var(--jp-rendermime-table-row-background);
+}
+
+.dataframe tbody tr:hover {
+  background: var(--jp-rendermime-table-row-hover-background);
+}
+
+/* test drag and drop item: can be deleted later */
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.list-container {
+  display: flex;
+  font-size: 18px;
+  background-color: #eee;
+  flex-direction: column;
+}
+.item-container {
+  background-color: #fff;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+}

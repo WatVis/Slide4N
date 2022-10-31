@@ -1,0 +1,9 @@
+{
+  "title": "Main Menu Example",
+  "description": "Main Menu Example settings.",
+  "jupyter.lab.toolbars": {
+    "Notebook": [{ "name": "Slide4N", "command": "nbstory:open", "rank": 60 }]
+  },
+  "additionalProperties": false,
+  "type": "object"
+}
