@@ -6,7 +6,7 @@ node_modules/
 *.egg-info/
 .ipynb_checkpoints
 *.tsbuildinfo
-NBStory/labextension
+Slide4N/labextension
 
 # Integration tests
 ui-tests/test-results/

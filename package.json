@@ -1,5 +1,5 @@
 {
-  "name": "nbstory",
+  "name": "slide4n",
   "version": "0.1.0",
   "description": "Show a random NASA Astronomy Picture of the Day in a JupyterLab panel",
   "keywords": [
@@ -7,9 +7,9 @@
     "jupyterlab",
     "jupyterlab-extension"
   ],
-  "homepage": "https://github.com/ff0820/nbstory",
+  "homepage": "https://github.com/ff0820/slide4n",
   "bugs": {
-    "url": "https://github.com/ff0820/nbstory/issues"
+    "url": "https://github.com/ff0820/slide4n/issues"
   },
   "license": "BSD-3-Clause",
   "author": {
@@ -26,7 +26,7 @@
   "style": "style/index.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ff0820/nbstory.git"
+    "url": "https://github.com/ff0820/slide4n.git"
   },
   "scripts": {
     "build": "jlpm build:lib && jlpm build:labextension:dev",
@@ -37,7 +37,7 @@
     "clean": "jlpm clean:lib",
     "clean:lib": "rimraf lib tsconfig.tsbuildinfo",
     "clean:lintcache": "rimraf .eslintcache .stylelintcache",
-    "clean:labextension": "rimraf nbstory/labextension",
+    "clean:labextension": "rimraf slide4n/labextension",
     "clean:all": "jlpm clean:lib && jlpm clean:labextension && jlpm clean:lintcache",
     "eslint": "jlpm eslint:check --fix",
     "eslint:check": "eslint . --cache --ext .ts,.tsx",
@@ -110,7 +110,7 @@
   "jupyterlab": {
     "extension": true,
     "schemaDir": "schema",
-    "outputDir": "nbstory/labextension"
+    "outputDir": "slide4n/labextension"
   },
   "jupyter-releaser": {
     "hooks": {

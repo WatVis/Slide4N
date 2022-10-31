@@ -1,5 +1,5 @@
 {
   "packageManager": "python",
-  "packageName": "NBStory",
-  "uninstallInstructions": "Use your Python package manager (pip, conda, etc.) to uninstall the package NBStory"
+  "packageName": "Slide4N",
+  "uninstallInstructions": "Use your Python package manager (pip, conda, etc.) to uninstall the package Slide4N"
 }

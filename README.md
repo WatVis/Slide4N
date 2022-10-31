@@ -1,7 +1,7 @@
-# NBStory
+# Slide4N
 
-[![Github Actions Status](https://github.com/github_username/NBStory/workflows/Build/badge.svg)](https://github.com/github_username/NBStory/actions/workflows/build.yml)[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/github_username/NBStory/main?urlpath=lab)
-A jupyterlab extension for NBStory.
+[![Github Actions Status](https://github.com/github_username/Slide4N/workflows/Build/badge.svg)](https://github.com/github_username/Slide4N/actions/workflows/build.yml)[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/github_username/Slide4N/main?urlpath=lab)
+A jupyterlab extension for Slide4N.
 
 ## Requirements
 
@@ -12,7 +12,7 @@ A jupyterlab extension for NBStory.
 To install the extension, execute:
 
 ```bash
-pip install NBStory
+pip install Slide4N
 ```
 
 ## Uninstall
@@ -20,7 +20,7 @@ pip install NBStory
 To remove the extension, execute:
 
 ```bash
-pip uninstall NBStory
+pip uninstall Slide4N
 ```
 
 ## Contributing
@@ -35,7 +35,7 @@ The `jlpm` command is JupyterLab's pinned version of
 
 ```bash
 # Clone the repo to your local environment
-# Change directory to the NBStory directory
+# Change directory to the Slide4N directory
 # Install package in development mode
 pip install -e .
 # Link your development version of the extension with JupyterLab
@@ -64,12 +64,12 @@ jupyter lab build --minimize=False
 ### Development uninstall
 
 ```bash
-pip uninstall NBStory
+pip uninstall Slide4N
 ```
 
 In development mode, you will also need to remove the symlink created by `jupyter labextension develop`
 command. To find its location, you can run `jupyter labextension list` to figure out where the `labextensions`
-folder is located. Then you can remove the symlink named `NBStory` within that folder.
+folder is located. Then you can remove the symlink named `Slide4N` within that folder.
 
 ### Packaging the extension
 
