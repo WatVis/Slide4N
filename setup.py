@@ -1,5 +1,5 @@
 """
-NBStory setup
+Slide4N setup
 """
 import json
 import sys
@@ -13,7 +13,7 @@ HERE = Path(__file__).parent.resolve()
 pkg_json = json.loads((HERE / "package.json").read_bytes())
 
 # The name of the project
-name = "NBStory"
+name = "Slide4N"
 
 lab_path = (HERE / pkg_json["jupyterlab"]["outputDir"])
 
